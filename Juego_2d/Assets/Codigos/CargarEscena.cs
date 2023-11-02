@@ -13,8 +13,6 @@ public class CargarEscena : MonoBehaviour
 
     IEnumerator CargarAsincrona(string nombre)
     {
-        yield return new WaitForSeconds(1.5f);
-
         AsyncOperation operacion = SceneManager.LoadSceneAsync(nombre);
 
         while (!operacion.isDone)
